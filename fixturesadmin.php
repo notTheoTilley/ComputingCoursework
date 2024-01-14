@@ -23,6 +23,19 @@
 </head>
 <body>
 
+<aside>
+        <button id="sidebar-toggle"></button>
+        <nav>
+            <ul>
+                <li><a href="admin.php">Dashboard</a><li>
+                <li><a href="users.php">Manage Users</a><li>
+                <li><a href="addfixtures.php">Manage Fixtures</a><li>
+                <li><a href="viewusers.php">View Users</a><li>
+                <li><a href="fixturesadmin.php">View Fixtures</a><li>
+            </ul>
+        </nav>
+    </aside>
+
 <?php
 $servername = "localhost";
 $username = "root";

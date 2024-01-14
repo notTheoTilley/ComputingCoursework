@@ -14,10 +14,11 @@
         <button id="sidebar-toggle"></button>
         <nav>
             <ul>
-                <li><a href="#">Dashboard</a><li>
-                <li><a href="users.php">Add User</a><li>
-                <li><a href="#">Manage Fixtures</a><li>
-                <li><a href="#">Manage Users</a><li>
+                <li><a href="admin.php">Dashboard</a><li>
+                <li><a href="users.php">Manage Users</a><li>
+                <li><a href="addfixtures.php">Manage Fixtures</a><li>
+                <li><a href="viewusers.php">View Users</a><li>
+                <li><a href="fixturesadmin.php">View Fixtures</a><li>
             </ul>
         </nav>
     </aside>

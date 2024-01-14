@@ -16,26 +16,6 @@
 
 
 <body>
-    <!-- <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-        <a class="navbar-brand" href="#">OundleSchoolSwimming</a>
-        </div>
-        <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="main.php">Home</a></li>
-        <li><a href="fixtures.php">Fixtures</a></li>
-        <li><a href="profile.php">Profile</a></li>
-        <li><a href="login.php">Log Out</a></li>
-        </ul>
-        <form class="navbar-form navbar-left" action="/action_page.php">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-    </div>
-    </nav> -->
 
     <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">

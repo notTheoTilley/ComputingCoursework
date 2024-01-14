@@ -12,12 +12,13 @@ Year INT(2) NOT NULL)");
 $stmt->execute();
 $stmt->closeCursor();
 
-$stmt = $conn->prepare("DROP TABLE IF EXISTS tblfixtures;
+$stmt2 = $conn->prepare("DROP TABLE IF EXISTS tblfixtures;
 CREATE TABLE tblfixtures 
-fixtureID INT(4) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+(fixtureID INT(4) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 Event VARCHAR(20) NOT NULL,
-Time VARCHAR(20) NOT NULL,
-Swimmer VARCHAR(20) NOT NULL;)
-$stmt->execute();
-$stmt->closeCursor();
+Location VARCHAR(20) NOT NULL,
+Date VARCHAR(20) NOT NULL,
+Time VARCHAR(20) NOT NULL)");
+$stmt2->execute();
+$stmt2->closeCursor();
 ?>
