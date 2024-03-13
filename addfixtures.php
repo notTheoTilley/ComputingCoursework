@@ -2,6 +2,11 @@
 <html>
 <head>
     <title>Add Fixtures</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
@@ -19,18 +24,17 @@
     </aside>
 
     <form action="postfixtures.php" method = "post">
-        Event: <input type="text" name="event"><br>
         Location: <input type="text" name="location"><br>
         Date: <input type="text" name="date"><br>
         Time: <input type="text" name="time"><br>
         <br>
 
         <input type="submit" value="Add Fixture">
-        <a href="admin.php">
-        <button>Back</button>
-        </a>
+        <a href="postfixtures.php">
 
+        <a href="admin.php" class="btn btn-success">Back</a> 
 
+    </form>
 
 </body>
 </html>

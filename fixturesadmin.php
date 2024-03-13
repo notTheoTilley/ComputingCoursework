@@ -53,12 +53,11 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo "<table>";
-    echo "<tr><th>FixtureID</th><th>Event</th><th>Location</th><th>Date</th><th>Time</th></tr>";
+    echo "<tr><th>FixtureID</th><th>Location</th><th>Date</th><th>Time</th></tr>";
 
     while($row = $result->fetch_assoc()) {
         echo "<tr>";
         echo "<td>" . $row["fixtureID"] . "</td>";
-        echo "<td>" . $row["Event"] . "</td>";
         echo "<td>" . $row["Location"] . "</td>";
         echo "<td>" . $row["Date"] . "</td>";
         echo "<td>" . $row["Time"] . "</td>";

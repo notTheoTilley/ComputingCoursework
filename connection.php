@@ -15,6 +15,4 @@ catch(PDOException $e)
     }
 
 ?>
-    <a href="login.php">
-        <button>Login</button>
-    </a>
+

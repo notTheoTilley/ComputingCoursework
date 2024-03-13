@@ -24,28 +24,17 @@
 <body>
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "swimming";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include_once "connection.php";
 
 $sql = "SELECT * FROM tblFixtures";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+//if ($result->num_rows > 0) {
     echo "<table>";
-    echo "<tr><th>FixtureID</th><th>Event</th><th>Location</th><th>Date</th><th>Time</th></tr>";
+    echo "<tr><th>Location</th><th>Date</th><th>Time</th></tr>";
 
-    while($row = $result->fetch_assoc()) {
+    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr>";
-        echo "<td>" . $row["fixtureID"] . "</td>";
-        echo "<td>" . $row["Event"] . "</td>";
         echo "<td>" . $row["Location"] . "</td>";
         echo "<td>" . $row["Date"] . "</td>";
         echo "<td>" . $row["Time"] . "</td>";
@@ -53,11 +42,11 @@ if ($result->num_rows > 0) {
     }
 
     echo "</table>";
-} else {
-    echo "No fixtures found";
-}
+//} else {
+//    echo "No fixtures found";
+//}
 
-$conn->close();
+
 ?>
 
 </body>
