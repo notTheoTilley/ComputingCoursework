@@ -5,7 +5,8 @@
 </head>
 <body>
 
-<aside>
+<!-- page references -->
+    <aside>
         <button id="sidebar-toggle"></button>
         <nav>
             <ul>
@@ -18,7 +19,7 @@
         </nav>
     </aside>
 
-
+    <!-- creates form to add user -->
     <form action="addusers.php" method = "post">
         First Name: <input type="text" name="forename"><br>
         Last Name: <input type="text" name="surname"><br>
@@ -30,14 +31,10 @@
                 <option value="F">Female</option>
                 <option value="O">Other</option>
                 </select>
+        Role: <select name="role">
+            <option value="0">Default</option>
         <br>
 
         <input type="submit" value="Add User">
-        <a href="admin.php">
-        <button>return</button>
-        </a>
-
-
-
 </body>
 </html>

@@ -37,25 +37,15 @@
     </aside>
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "swimming";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+include_once "connection.php";
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+$stmt = $conn->prepare("SELECT * FROM tblfixtures");
+$stmt->execute();
 
-$sql = "SELECT * FROM tblFixtures";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
     echo "<table>";
     echo "<tr><th>FixtureID</th><th>Location</th><th>Date</th><th>Time</th></tr>";
-
-    while($row = $result->fetch_assoc()) {
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         echo "<tr>";
         echo "<td>" . $row["fixtureID"] . "</td>";
         echo "<td>" . $row["Location"] . "</td>";
@@ -65,11 +55,7 @@ if ($result->num_rows > 0) {
     }
 
     echo "</table>";
-} else {
-    echo "No fixtures found";
-}
 
-$conn->close();
 ?>
 
 </body>
