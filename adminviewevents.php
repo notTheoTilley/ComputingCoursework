@@ -21,10 +21,6 @@
             background-color: #f2f2f2;
         }
     </style>
-
-    <!-- imports navbar javascript -->
-    <script src="usernavbar.js"></script>
-
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,23 +28,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="adminnavbar.js"></script>
 </head>
-<body>
 
-    <!-- imports navbar -->
-    <div id="navbar"></div>
+<body>
+<!-- adds navbar -->
+<div id="navbar"></div>
 
 <?php
 include_once "connection.php"; //connects to database
 
-$stmt = $conn->prepare("SELECT * FROM tblevents"); //SQL statement to fetch data
+$stmt = $conn->prepare("SELECT * FROM tblevents"); //fetches from database
 $stmt->execute();
 
-    //creates table to display data
+    //creates and displays data in a table
     echo "<table>";
-    echo "<tr><th>EventName</th><th>Distance</th><th>Gender</th><th>SchoolRecord</th></tr>";
+    echo "<tr><th>EventID</th><th>EventName</th><th>Distance</th><th>Gender</th><th>SchoolRecord</th></tr>";
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         echo "<tr>";
+        echo "<td>" . $row["eventID"] . "</td>";
         echo "<td>" . $row["EventName"] . "</td>";
         echo "<td>" . $row["Distance"] . "</td>";
         echo "<td>" . $row["Gender"] . "</td>";
