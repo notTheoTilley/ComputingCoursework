@@ -33,8 +33,8 @@ $stmt3 = $conn->prepare("DROP TABLE IF EXISTS tblevents;
 CREATE TABLE tblevents
 (eventID INT(4) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 EventName VARCHAR(20) NOT NULL,
-Distance VARCHAR(20) NOT NULL,
-Gender VARCHAR(20) NOT NULL,
+Distance VARCHAR(4) NOT NULL,
+Gender VARCHAR(1) NOT NULL,
 SchoolRecord INT(20) NOT NULL)");
 $stmt3->execute();
 $stmt3->closeCursor();
