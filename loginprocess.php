@@ -15,6 +15,7 @@ if ($stmt->rowCount() > 0) {
                 header('Location: admin.php'); //if role is 1 user is redirected to admin page
                 exit(); // Stop further execution after redirection
             } elseif ($row['Role'] == 0) { //if role is 0 user is redirected to user page
+                $_SESSION['name']=$row["UserID"];
                 header('Location: main.html');
                 exit(); // Stop further execution after redirection
             } else {

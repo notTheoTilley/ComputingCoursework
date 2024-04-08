@@ -17,6 +17,7 @@
 
 	<?php
 	session_start();
+	session_destroy();
 	//Checks to see if there is an error session variable and unsets it if there is.
 	//print_r($_SESSION);
 	if (isset($_SESSION["error"])){

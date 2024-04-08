@@ -42,10 +42,10 @@ echo("Events table created. ");
 //creates tblfixturedetails
 $stmt4 = $conn->prepare("DROP TABLE IF EXISTS tblfixturedetails;
 CREATE TABLE tblfixturedetails
-(fixtureID INT(4),
-eventID INT(4),
-UserID INT(4),
-PRIMARY KEY(fixtureID,eventID))");
+(Location VARCHAR(20),
+EventName VARCHAR(20),
+Username VARCHAR(20),
+PRIMARY KEY(Username, Location))");
 $stmt4->execute();
 $stmt4->closeCursor();
 echo("Link table created. ");
