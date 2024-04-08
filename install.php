@@ -27,7 +27,6 @@ $stmt2->execute();
 $stmt2->closeCursor();
 echo("Fixtures table created. ");
 
-
 //creates tblevents
 $stmt3 = $conn->prepare("DROP TABLE IF EXISTS tblevents;
 CREATE TABLE tblevents
@@ -40,6 +39,16 @@ $stmt3->execute();
 $stmt3->closeCursor();
 echo("Events table created. ");
 
+//creates tblfixturedetails
+$stmt4 = $conn->prepare("DROP TABLE IF EXISTS tblfixturedetails;
+CREATE TABLE tblfixturedetails
+(fixtureID INT(4),
+eventID INT(4),
+UserID INT(4),
+PRIMARY KEY(fixtureID,eventID))");
+$stmt4->execute();
+$stmt4->closeCursor();
+echo("Link table created. ");
 
 //hard codes admin user
 try {
